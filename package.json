@@ -20,8 +20,104 @@
     "url": "https://github.com/whalue-design/whalue-design-vue.git"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./packages --ext .vue,.js,.ts",
+    "lint-fix": "eslint --fix ./packages --ext .vue,.js,.ts"
+  },
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
-  "unpkg": "lib/index.js"
+  "unpkg": "lib/index.js",
+  "style": "lib/theme-chalk/index.css",
+  "files": [
+    "lib",
+    "es",
+    "packages"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.6.0",
+    "async-validator": "^3.5.1",
+    "dayjs": "^1.10.4",
+    "lodash": "^4.17.20",
+    "mitt": "^2.1.0",
+    "normalize-wheel": "^1.0.1",
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "@rollup/plugin-typescript": "^8.1.1",
+    "@types/jest": "^26.0.20",
+    "@types/lodash": "^4.14.168",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "@vue/babel-plugin-jsx": "^1.0.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0",
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "lint-staged": "^10.5.4",
+    "mini-css-extract-plugin": "^1.3.5",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.38.5",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "throttle-debounce": "^3.0.1",
+    "ts-loader": "^8.0.15",
+    "typescript": "^4.1.3",
+    "url-loader": "^4.1.1",
+    "vue": "^3.0.5",
+    "vue-jest": "^5.0.0-alpha.7",
+    "vue-loader": "^16.1.2",
+    "vue-router": "^4.0.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^5.21.1",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.less": "stylelint --syntax less",
+    "*.{vue,js,ts}": "vue-cli-service lint"
+  }
 }
