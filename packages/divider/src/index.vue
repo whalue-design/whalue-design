@@ -13,7 +13,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "WDDivider",
+  name: "WdDivider",
   props: {
     direction: {
       type: String,

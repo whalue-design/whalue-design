@@ -4,4 +4,4 @@ home: true
 
 # Hello
 
-<WDDivider />
+<wd-divider />
