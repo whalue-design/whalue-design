@@ -1,6 +1,7 @@
 {
-  "name": "whalue-design-vue",
-  "version": "1.0.0",
+  "name": "whalue-design",
+  "version": "0.0.1",
+  "private": true,
   "description": "A Vue.js 3.0 UI Library for Web.",
   "keywords": [
     "whalue",
@@ -11,16 +12,19 @@
     "vueComponent"
   ],
   "author": "cnguu <www@cnguu.cn>",
-  "homepage": "https://github.com/whalue-design/whalue-design-vue/",
+  "homepage": "https://github.com/whalue-design/whalue-design/",
   "bugs": {
-    "url": "https://github.com/whalue-design/whalue-design-vue/issues"
+    "url": "https://github.com/whalue-design/whalue-design/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/whalue-design/whalue-design-vue.git"
+    "url": "https://github.com/whalue-design/whalue-design.git"
   },
   "license": "MIT",
   "scripts": {
+    "gen:version": "node build/gen-version.js",
+    "bootstrap": "yarn --frozen-lockfile && npx lerna bootstrap && yarn gen:version",
+    "clean:lib": "rimraf lib && rimraf es",
     "test": "jest",
     "lint": "eslint ./packages --ext .vue,.js,.ts",
     "lint-fix": "eslint --fix ./packages --ext .vue,.js,.ts"

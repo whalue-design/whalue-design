@@ -1,0 +1,14 @@
+{
+  "name": "@whalue-design/utils",
+  "version": "0.0.0",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.5"
+  },
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^2.0.0-rc.0"
+  }
+}

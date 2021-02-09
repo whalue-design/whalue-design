@@ -37,9 +37,9 @@ module.exports = {
         [
           "babel-plugin-module-resolver",
           {
-            root: ["whalue-design-vue"],
+            root: ["whalue-design"],
             alias: {
-              "@whalue-design-vue": "whalue-design-vue/lib",
+              "@whalue-design": "whalue-design/lib",
             },
           },
         ],

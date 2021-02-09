@@ -1,0 +1,27 @@
+{
+  "name": "whalue-design",
+  "version": "0.0.1",
+  "description": "A Vue.js 3.0 UI Library for Web.",
+  "keywords": [
+    "whalue",
+    "whalue-design",
+    "whalue-design-vue",
+    "vue",
+    "vue3",
+    "vueComponent"
+  ],
+  "author": "cnguu <www@cnguu.cn>",
+  "homepage": "https://github.com/whalue-design/whalue-design/",
+  "bugs": {
+    "url": "https://github.com/whalue-design/whalue-design/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whalue-design/whalue-design.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@whalue-design/divider": "^0.0.0"
+  }
+}

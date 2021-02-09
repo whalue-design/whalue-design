@@ -1,0 +1,32 @@
+.iconfont-mixin() {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  line-height: 0;
+  color: @icon-color;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  vertical-align: -0.125em;
+
+  > * {
+    line-height: 1;
+  }
+
+  svg {
+    display: inline-block;
+  }
+
+  & &-icon {
+    display: block;
+  }
+}
+
+.iconfont-size-under-12px(@size, @rotate: 0deg) {
+  @font-scale: unit(@size / 12px);
+
+  display: inline-block;
+  font-size: 12px;
+  transform: scale(@font-scale) rotate(@rotate);
+}

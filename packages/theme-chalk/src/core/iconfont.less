@@ -1,0 +1,17 @@
+.@{iconfont-prefix} {
+  .iconfont-mixin();
+
+  &[tabindex] {
+    cursor: pointer;
+  }
+}
+
+.@{iconfont-prefix}-spin::before {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}
+
+.@{iconfont-prefix}-spin {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}

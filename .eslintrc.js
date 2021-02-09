@@ -19,5 +19,7 @@ module.exports = {
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint",
   ],
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-var-requires": 0,
+  },
 };

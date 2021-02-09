@@ -1,0 +1,48 @@
+@divider-prefix-cls: ~"@{design-prefix}-divider";
+
+.@{divider-prefix-cls} {
+  .reset-component();
+
+  position: relative;
+  background-color: @border-color-base;
+
+  &--horizontal {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: @margin-base 0;
+  }
+
+  &--vertical {
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    margin: 0 @margin-base;
+    vertical-align: middle;
+  }
+
+  &__text {
+    position: absolute;
+    padding: 0 @padding-base;
+    font-size: @font-size-base;
+    font-weight: 500;
+    color: @text-color;
+    background-color: @white;
+
+    &.is-left {
+      left: @padding-base;
+      transform: translateY(-50%);
+    }
+
+    &.is-center {
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &.is-right {
+      right: @padding-base;
+      transform: translateY(-50%);
+    }
+  }
+}

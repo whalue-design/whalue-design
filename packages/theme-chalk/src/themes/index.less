@@ -1,0 +1,103 @@
+@import "../color/colors";
+
+@theme: default;
+
+@design-prefix: wd;
+@iconfont-prefix: "@{design-prefix}-icon";
+
+@primary-color: @blue-6;
+@success-color: @green-6;
+@error-color: @red-6;
+@warn-color: @yellow-6;
+@normal-color: #f2f2f2;
+@white: #ffffff;
+@black: #000000;
+
+@primary-1: color(~`colorPalette("@{primary-color}", 1) `);
+@primary-2: color(~`colorPalette("@{primary-color}", 2) `);
+@primary-3: color(~`colorPalette("@{primary-color}", 3) `);
+@primary-4: color(~`colorPalette("@{primary-color}", 4) `);
+@primary-5: color(~`colorPalette("@{primary-color}", 5) `);
+@primary-6: @primary-color;
+@primary-7: color(~`colorPalette("@{primary-color}", 7) `);
+@primary-8: color(~`colorPalette("@{primary-color}", 8) `);
+@primary-9: color(~`colorPalette("@{primary-color}", 9) `);
+@primary-10: color(~`colorPalette("@{primary-color}", 10) `);
+
+@body-background: #f2f2f2;
+@component-background: @white;
+@font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@code-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  monospace;
+@text-color: fade(@black, 85%);
+@text-color-secondary: fade(@black, 45%);
+@text-color-inverse: @white;
+@icon-color: inherit;
+@icon-color-hover: fade(@black, 75%);
+@heading-color: fade(@black, 85%);
+@text-color-dark: fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
+@text-selection-bg: @primary-color;
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: "tnum";
+@font-size-base: 14px;
+@font-size-medium: @font-size-base + 2px;
+@font-size-large: @font-size-base + 4px;
+@font-size-small: @font-size-base - 1px;
+@font-size-mini: @font-size-base - 2px;
+@heading-1-size: ceil(@font-size-base * 2.71);
+@heading-2-size: ceil(@font-size-base * 2.14);
+@heading-3-size: ceil(@font-size-base * 1.71);
+@heading-4-size: ceil(@font-size-base * 1.42);
+@heading-5-size: ceil(@font-size-base * 1.14);
+@line-height-base: 1.5715;
+@border-radius-base: 2px;
+@placeholder-color: hsv(0, 0, 75%);
+
+@padding-base: 12px;
+@padding-large: @padding-base + 12px;
+@padding-medium: @padding-base + 4px;
+@padding-small: @padding-base - 4px;
+@padding-mini: @padding-base - 8px;
+
+@margin-base: 12px;
+@margin-large: @margin-base + 12px;
+@margin-medium: @margin-base + 4px;
+@margin-small: @margin-base - 4px;
+@margin-mini: @margin-base - 8px;
+
+@link-decoration: none;
+@link-hover-decoration: none;
+@link-focus-decoration: none;
+@link-focus-outline: 0;
+
+@screen-xs: 480px;
+@screen-sm: 576px;
+@screen-md: 768px;
+@screen-lg: 992px;
+@screen-xl: 1200px;
+@screen-xxl: 1600px;
+
+@screen-xs-max: (@screen-sm - 1px);
+@screen-sm-max: (@screen-md - 1px);
+@screen-md-max: (@screen-lg - 1px);
+@screen-lg-max: (@screen-xl - 1px);
+@screen-xl-max: (@screen-xxl - 1px);
+
+@border-color-base: #e6e6e6;
+@border-color-inverse: @white;
+@border-width-base: 1px;
+@border-style-base: solid;
+
+@background-color-light: hsv(0, 0, 98%);
+@background-color-base: hsv(0, 0, 96%);
+
+@disabled-color: fade(#000, 25%);
+@disabled-bg: @background-color-base;
+@disabled-color-dark: fade(#fff, 35%);
+
+@typography-title-font-weight: 600;
+@typography-title-margin-top: 1.2em;
+@typography-title-margin-bottom: 0.5em;
