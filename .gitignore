@@ -24,4 +24,5 @@ package-lock.json
 dist
 lib
 packages/whalue-design/version.ts
-docs
+docs/.vuepress/.temp
+docs/.vuepress/.cache
