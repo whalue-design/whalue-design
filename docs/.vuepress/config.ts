@@ -15,12 +15,12 @@ const config: UserConfig<DefaultThemeOptions> = {
         .rule("less")
         .oneOf("normal")
         .use("less-loader")
-        .options({ javascriptEnabled: true })
+        .options({ lessOptions: { javascriptEnabled: true } })
         .end()
         .end()
         .oneOf("modules")
         .use("less-loader")
-        .options({ javascriptEnabled: true });
+        .options({ lessOptions: { javascriptEnabled: true } });
     },
   },
 };
