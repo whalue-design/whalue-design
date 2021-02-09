@@ -23,7 +23,7 @@
   "license": "MIT",
   "scripts": {
     "gen:version": "node build/gen-version.js",
-    "bootstrap": "yarn --frozen-lockfile && npx lerna bootstrap && yarn gen:version",
+    "bs": "yarn --frozen-lockfile && npx lerna bootstrap && yarn gen:version",
     "clean:lib": "rimraf lib && rimraf es",
     "test": "jest",
     "docs:dev": "vuepress dev docs",
