@@ -10,17 +10,10 @@ const config: UserConfig<DefaultThemeOptions> = {
 
   port: 9527,
   bundlerConfig: {
-    chainWebpack: (config: any) => {
-      config.module
-        .rule("less")
-        .oneOf("normal")
-        .use("less-loader")
-        .options({ lessOptions: { javascriptEnabled: true } })
-        .end()
-        .end()
-        .oneOf("modules")
-        .use("less-loader")
-        .options({ lessOptions: { javascriptEnabled: true } });
+    less: {
+      lessOptions: {
+        javascriptEnabled: true,
+      },
     },
   },
 };
