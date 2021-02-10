@@ -26,8 +26,8 @@
     "bs": "yarn --frozen-lockfile && npx lerna bootstrap && yarn gen:version",
     "clean:lib": "rimraf lib && rimraf es",
     "test": "jest",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "vp:dev": "vuepress dev vuepress",
+    "vp:build": "vuepress build vuepress",
     "lint": "eslint ./packages --ext .vue,.js,.ts",
     "lint-fix": "eslint --fix ./packages --ext .vue,.js,.ts"
   },
