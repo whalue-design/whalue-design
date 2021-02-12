@@ -1,14 +1,15 @@
 @import "../color/colors";
 
-@theme: default;
+@theme: default; // dark
 
 @design-prefix: wd;
 @iconfont-prefix: "@{design-prefix}-icon";
 
 @primary-color: @blue-6;
 @success-color: @green-6;
-@error-color: @red-6;
 @warn-color: @yellow-6;
+@danger-color: @red-6;
+@info-color: @grey-6;
 @normal-color: #f2f2f2;
 @white: #ffffff;
 @black: #000000;
@@ -43,8 +44,8 @@
 @font-variant-base: tabular-nums;
 @font-feature-settings-base: "tnum";
 @font-size-base: 14px;
-@font-size-medium: @font-size-base + 2px;
 @font-size-large: @font-size-base + 4px;
+@font-size-medium: @font-size-base + 2px;
 @font-size-small: @font-size-base - 1px;
 @font-size-mini: @font-size-base - 2px;
 @heading-1-size: ceil(@font-size-base * 2.71);
@@ -56,17 +57,17 @@
 @border-radius-base: 2px;
 @placeholder-color: hsv(0, 0, 75%);
 
-@padding-base: 12px;
-@padding-large: @padding-base + 12px;
-@padding-medium: @padding-base + 4px;
-@padding-small: @padding-base - 4px;
-@padding-mini: @padding-base - 8px;
-
 @margin-base: 12px;
 @margin-large: @margin-base + 12px;
 @margin-medium: @margin-base + 4px;
 @margin-small: @margin-base - 4px;
 @margin-mini: @margin-base - 8px;
+
+@padding-base: 12px;
+@padding-large: @padding-base + 12px;
+@padding-medium: @padding-base + 4px;
+@padding-small: @padding-base - 4px;
+@padding-mini: @padding-base - 8px;
 
 @link-decoration: none;
 @link-hover-decoration: none;
@@ -94,10 +95,23 @@
 @background-color-light: hsv(0, 0, 98%);
 @background-color-base: hsv(0, 0, 96%);
 
-@disabled-color: fade(#000, 25%);
+@disabled-color: fade(@black, 25%);
 @disabled-bg: @background-color-base;
 @disabled-color-dark: fade(#fff, 35%);
 
 @typography-title-font-weight: 600;
 @typography-title-margin-top: 1.2em;
 @typography-title-margin-bottom: 0.5em;
+
+@btn-height-base: 32px;
+@btn-height-large: @btn-height-base + 8px;
+@btn-height-medium: @btn-height-base + 4px;
+@btn-height-small: @btn-height-base - 4px;
+@btn-height-mini: @btn-height-base - 8px;
+@btn-padding-base: 0 @padding-base - 1px;
+@btn-padding-large: 0 @padding-large - 1px;
+@btn-padding-medium: 0 @padding-medium - 1px;
+@btn-padding-small: 0 @padding-small - 1px;
+@btn-padding-mini: 0 @padding-mini - 1px;
+@btn-border-radius-base: @border-radius-base;
+@btn-font-weight: 400;

@@ -6,6 +6,7 @@ import isServer from "@whalue-design/utils/isServer";
 import { version } from "./version";
 import dayjs from "dayjs";
 
+import WdButton from "@whalue-design/button";
 import WdDivider from "@whalue-design/divider";
 
 if (!isServer && !(window as any).dayjs) {
@@ -17,11 +18,11 @@ const defaultInstallOpt: InstallOptions = {
   zIndex: 3000,
 };
 
-const components = [WdDivider];
+const components = [WdButton, WdDivider];
 
 const install = (app: App, opt: InstallOptions): void => {
   const option = Object.assign(defaultInstallOpt, opt);
-  app.config.globalProperties.$WHALUE = option;
+  app.config.globalProperties.$whalue = option;
   setConfig(option);
 
   components.forEach((component) => {
@@ -29,7 +30,7 @@ const install = (app: App, opt: InstallOptions): void => {
   });
 };
 
-export { WdDivider, install, version };
+export { WdButton, WdDivider, install, version };
 
 export default {
   install,

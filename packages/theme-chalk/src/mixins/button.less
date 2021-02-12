@@ -1,0 +1,68 @@
+.button-size(@height; @padding; @font-size; @border-radius) {
+  height: @height;
+  padding: @padding;
+  font-size: @font-size;
+  border-radius: @border-radius;
+}
+
+.button-color(@color; @background-color; @border-color) {
+  color: @color;
+  background-color: @background-color;
+  border-color: @border-color;
+
+  > a:only-child {
+    color: currentColor;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      content: "";
+    }
+  }
+}
+
+.button-plain(@color) {
+  .button-color(@color; ~`colorPalette("@{color}", 1) `; ~`colorPalette("@{color}", 4) `);
+
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@text-color-inverse; @color; @color);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      .button-color(~`colorPalette("@{color}", 4) `; ~`colorPalette("@{color}", 1) `; ~`colorPalette("@{color}", 2) `);
+    }
+  }
+}
+
+.button-variant(@color; @background-color; @border-color) {
+  .button-color(@color; @background-color; @border-color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    .button-color(@color; ~`colorPalette("@{background-color}", 5) `; ~`colorPalette("@{border-color}", 5) `);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      .button-color(@text-color-inverse; ~`colorPalette("@{background-color}", 5) `; ~`colorPalette("@{border-color}", 5) `);
+    }
+  }
+
+  &.is-plain {
+    .button-plain(@background-color);
+  }
+}
