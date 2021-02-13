@@ -1,6 +1,6 @@
 {
   "name": "@whalue-design/whalue-design",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A Vue.js 3.0 UI Library for Web.",
   "keywords": [
     "whalue",
@@ -22,6 +22,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "dependencies": {
+    "@whalue-design/button": "^0.0.0",
     "@whalue-design/divider": "^0.0.0"
   }
 }

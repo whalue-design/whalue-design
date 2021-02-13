@@ -123,6 +123,6 @@
   },
   "lint-staged": {
     "*.less": "stylelint --syntax less",
-    "*.{vue,js,ts}": "vue-cli-service lint"
+    "*.{vue,js,ts}": "yarn lint"
   }
 }
