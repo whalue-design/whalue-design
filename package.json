@@ -47,6 +47,7 @@
   ],
   "dependencies": {
     "@popperjs/core": "^2.6.0",
+    "@whalue-design/colors": "^2.0.0",
     "async-validator": "^3.5.1",
     "dayjs": "^1.10.4",
     "lodash": "^4.17.20",
@@ -105,6 +106,7 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "throttle-debounce": "^3.0.1",
+    "ts-jest": "^26.5.1",
     "ts-loader": "^8.0.17",
     "typescript": "^4.1.5",
     "url-loader": "^4.1.1",
